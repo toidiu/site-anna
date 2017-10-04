@@ -1,6 +1,7 @@
 module.exports = {
   modules: [
     //'@nuxtjs/bulma'
+    '@nuxtjs/font-awesome'
   ],
   css: [
     // Load a node module directly (here it's a SASS file)
