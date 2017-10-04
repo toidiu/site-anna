@@ -1,7 +1,7 @@
 {
-  "name": "site-anna",
+  "name": "toidiu",
   "version": "1.0.0",
-  "description": "a site for anna",
+  "description": "a site made with technology, for technology, to talk about technology,",
   "author": "toidiu <toidiu@protonmail.com>",
   "private": true,
   "scripts": {
