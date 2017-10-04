@@ -17,29 +17,20 @@
       </span>
     </a>
 
-    <div class="navbar-burger burger" data-target="navMenuTransparentExample">
+    <div class="navbar-burger burger" v-bind:class="{ 'is-active': isActive }" data-target="navMenuTransparentExample" v-on:click="toggleMenu"  >
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
 
-  <div id="navMenuTransparentExample" class="navbar-menu">
+  <div id="navMenuTransparentExample" class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
     <div class="navbar-start">
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link  is-active" href="/documentation/overview/start/">
           Docs
         </a>
         <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item " href="/documentation/overview/start/">
-            Overview
-          </a>
-          <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-            Modifiers
-          </a>
-          <a class="navbar-item " href="http://bulma.io/documentation/columns/basics/">
-            Columns
-          </a>
           <a class="navbar-item " href="http://bulma.io/documentation/layout/container/">
             Layout
           </a>
@@ -49,10 +40,6 @@
           <a class="navbar-item " href="http://bulma.io/documentation/elements/box/">
             Elements
           </a>
-
-            <a class="navbar-item is-active" href="http://bulma.io/documentation/components/breadcrumb/">
-              Components
-            </a>
 
           <hr class="navbar-divider">
           <div class="navbar-item">
@@ -102,64 +89,10 @@
               </div>
             </a>
 
-          <a class="navbar-item" href="http://bulma.io/blog/">
-            More posts
-          </a>
           <hr class="navbar-divider">
-          <div class="navbar-item">
-            <div class="navbar-content">
-              <div class="level is-mobile">
-                <div class="level-left">
-                  <div class="level-item">
-                    <strong>Stay up to date!</strong>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <div class="level-item">
-                    <a class="button bd-is-rss is-small" href="http://bulma.io/atom.xml">
-                      <span class="icon is-small">
-                        <i class="fa fa-rss"></i>
-                      </span>
-                      <span>Subscribe</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <div class="navbar-link">
-          More
-        </div>
-        <div id="moreDropdown" class="navbar-dropdown is-boxed">
-          <a class="navbar-item " href="http://bulma.io/extensions/">
-            <div class="level is-mobile">
-              <div class="level-left">
-                <div class="level-item">
-                  <p>
-                    <strong>Extensions</strong>
-                    <br>
-                    <small>Side projects to enhance Bulma</small>
-                  </p>
-                </div>
-              </div>
-              <div class="level-right">
-                <div class="level-item">
-                  <span class="icon has-text-info">
-                    <i class="fa fa-plug"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <a class="navbar-item " href="http://bulma.io/expo/">
-        <span class="bd-emoji">⭐️</span>
-        Expo
-      </a>
+
       <a class="navbar-item " href="http://bulma.io/love/">
         <span class="bd-emoji">❤️</span>
         Love
@@ -210,16 +143,20 @@
 </nav>
 </template>
 
-//document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
-//        function toggleNav() {
-//                var nav = document.getElementById("nav-menu");
-//                var className = nav.getAttribute("class");
-//                if(className == "nav-right nav-menu") {
-//                    nav.className = "nav-right nav-menu is-active";
-//                } else {
-//                    nav.className = "nav-right nav-menu";
-//                }
-//        }
-//
+<script>
+export default {
+  data () {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    toggleMenu: function () {
+      this.isActive = !this.isActive
+    }
+  }
+}
+</script>
+
 <style>
 </style>
