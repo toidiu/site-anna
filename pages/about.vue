@@ -6,7 +6,7 @@
         Anna Ciriani Dean
       </h1>
       <h2 class="subtitle">
-        an ESL expert
+        all about me
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button is-primary">Papers</a>
