@@ -1,4 +1,9 @@
 module.exports = {
+  build: {
+    vendor: [
+      'axios'
+    ]
+  },
   modules: [
     //'@nuxtjs/bulma'
     //'@nuxtjs/font-awesome'

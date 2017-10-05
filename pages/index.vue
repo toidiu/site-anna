@@ -1,25 +1,45 @@
 <template>
   <section class="section">
     <div>
-      <logo/>
       <h1 class="title">
-        Anna Ciriani Dean
+        mta-status
       </h1>
       <h2 class="subtitle">
-        an ESL expert
+        blo
+        {{ $store.state.mta.timestamp }}
+        </br>
+        bla
+        {{ $store.state.counter }}
+        </br>
+        blu
+        {{ timestamp }}
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button is-primary">Papers</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button">Portfolio</a>
+        <a @click="$store.commit('increment')"  class="button is-primary">Count</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
+  data () {
+    return { timestamp: 'default' }
+  },
   components: {
+  },
+  asyncData (context) {
+    return { timestamp: 'now' }
+  },
+  async fetch ({ store, params }) {
+    try {
+      let { data } = await axios.get('http://localhost:4000')
+      store.commit('setMta', data)
+    } catch (e) {
+      this.errors.push(e)
+    }
   }
 }
 </script>
