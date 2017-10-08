@@ -3,14 +3,21 @@
     <div>
       <logo/>
       <h1 class="title">
-        Anna Ciriani Dean
+        mta-status
       </h1>
-      <h2 class="subtitle">
-        all about me
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button is-primary">Papers</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button">Portfolio</a>
+
+      <div>
+        <strong>mta-status</strong> is a project to parse the xml api that is provided by the mta and transform it into a nice json api.
+      </div>
+
+      </br>
+      <div>
+        It is written in rust and vuejs
+      </div>
+
+      </br>
+      <div>
+        More information can be found at the <a href="http://github.com/toidiu/mta-status">github</a> page.
       </div>
     </div>
   </section>

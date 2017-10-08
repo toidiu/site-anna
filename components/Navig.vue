@@ -2,7 +2,7 @@
 <nav class="navbar is-light">
   <div class="navbar-brand">
     <nuxt-link class="navbar-item" to="/">
-      toidiu
+      mta-status
     </nuxt-link>
 
     <div class="navbar-burger burger" v-bind:class="{ 'is-active': isActive }" data-target="navMenuTransparentExample" v-on:click="toggleMenu"  >
@@ -18,7 +18,7 @@
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+      <a class="navbar-item" href="https://github.com/toidiu/mta-status" target="_blank">
         <span class="icon" style="color: #333;">
           <i class="fa fa-lg fa-github"></i>
         </span>
